@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankit Raj | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #1e293b;
+      padding: 20px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #38bdf8;
+      font-size: 26px;
+    }
+
+    nav a {
+      color: #f1f5f9;
+      margin: 0 15px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 10%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #38bdf8;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f1f5f9;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    section h2 {
+      text-align: center;
+      color: #38bdf8;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .skills-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .skills-icons i {
+      font-size: 45px;
+      transition: 0.3s;
+    }
+
+    .skills-icons i:hover {
+      transform: scale(1.2);
+      color: #38bdf8;
+    }
+
+    .projects div {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .projects a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .achievements ul {
+      list-style: none;
+      line-height: 2;
+      text-align: center;
+    }
+
+    .contact .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      color: #38bdf8;
+      font-size: 28px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #f1f5f9;
+      transform: scale(1.2);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    form input, form textarea {
+      padding: 12px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+      background: #334155;
+      color: #e2e8f0;
+    }
+
+    form button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      color: #0f172a;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #7dd3fc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e293b;
+    }
+    /* 🎓 Education Section */
+#education {
+  background: #1e293b;
+  padding: 60px 10%;
+  border-radius: 12px;
+  margin: 40px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#education h2 {
+  text-align: center;
+  color: #38bdf8;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+.edu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.edu-card {
+  background: #0f172a;
+  border: 2px solid #38bdf8;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  background: #12213b;
+}
+
+.edu-card h3 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.edu-card p {
+  color: #e2e8f0;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+/* 📱 Responsive Education Section */
+@media (max-width: 768px) {
+  .edu-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .edu-card {
+    width: 90%;
+  }
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 8px;
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  section {
+    padding: 40px 5%;
+  }
+
+  .skills-icons {
+    gap: 20px;
+  }
+
+  .skills-icons i {
+    font-size: 35px;
+  }
+
+  .projects div {
+    padding: 15px;
+  }
+
+  .achievements ul {
+    font-size: 15px;
+  }
+
+  .social-links a {
+    font-size: 24px;
+  }
+
+  footer p {
+    font-size: 14px;
+  }
+}
+/* 📱 Responsive Social Media Buttons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #38bdf8;
+  font-size: 26px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.social-links a span {
+  font-size: 14px;
+  color: #f1f5f9;
+  margin-top: 6px;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+}
+
+/* 📱 Mobile Friendly Social Icons */
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .social-links a {
+    font-size: 24px;
+  }
+
+  .social-links a span {
+    font-size: 12px;
+  }
+
+  footer .social-links {
+    flex-wrap: nowrap;
+    gap: 18px;
+  }
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ankit Raj</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="ankit.jpeg" alt="Ankit Raj Photo">
+    <h2>Hi, I'm Ankit Raj</h2>
+    <p>A passionate B.Tech student & aspiring developer who loves coding, AI, and Linux customization.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">
+      I'm a 2nd-year B.Tech student at GL Bajaj Institute of Technology and Management.  
+      I enjoy working with Java, web development, and Linux systems.  
+      My goal is to create innovative tech projects and land an internship to sharpen my skills.
+    </p>
+  </section>
+  <section id="education">
+  <h2>Education</h2>
+  <div class="edu-container">
+    <div class="edu-card">
+      <h3>🎓 B.Tech in Computer Science & Engineering</h3>
+      <p><strong>GL Bajaj Institute of Technology and Management</strong></p>
+      <p>2024 – 2028 (Ongoing)</p>
+      <p>Current Year: 2nd Year</p>
+      <p>CGPA: 8.18 (till 2nd semester)</p>
+    </div>
+
+    <div class="edu-card">
+      <h3>🏫Higher school</h3>
+      <p><strong>B.S.E.B Board</strong></p>
+      <p>Year: 2023</p>
+      <p>Percentage: 84%</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <section id="skills">
+    <h2>Skills & Technologies</h2>
+    <div class="skills-icons">
+      <i class="fa-brands fa-html5" title="HTML5"></i>
+      <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+      <i class="fa-brands fa-java" title="Java"></i>
+      <i class="fa-brands fa-linux" title="Linux"></i>
+      <i class="fa-brands fa-github" title="GitHub"></i>
+      <i class="fa-brands fa-js" title="JavaScript"></i>
+      <i class="fa-solid fa-database" title="Database"></i>
+      <i class="fa-solid fa-code" title="C Programming"></i>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div>
+      <h3>💬 Chatbot for Customer Support</h3>
+      <p>A chatbot built using Java to answer customer queries automatically.</p>
+      <a href="https://github.com/ankitraj/chatbot" target="_blank">View on GitHub</a>
+    </div>
+    <div>
+      <h3>🏠 Smart Home Automation</h3>
+      <p>IoT project using Arduino and Blynk app to control devices remotely.</p>
+      <a href="https://github.com/ankitraj/smart-home" target="_blank">View on GitHub</a>
+    </div>
+  </section>
+
+  <section id="achievements" class="achievements">
+    <h2>Achievements</h2>
+    <ul>
+      <li>🏆 Solved 100+ DSA problems on LeetCode</li>
+      <li>💡 Built and customized my own Arch Linux setup</li>
+      <li>🎓 Active learner of AI, IoT, and Cybersecurity</li>
+    </ul>
+  </section>
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p style="text-align:center;">Let's connect! Tap any icon below to reach me instantly 👇</p>
+  <div class="social-links">
+    <a href="mailto:ankitraj@example.com" target="_blank" title="Send Email">
+      <i class="fa-solid fa-envelope"></i>
+      <span>Email</span>
+    </a>
+    <a href="https://linkedin.com/in/ankitraj" target="_blank" title="LinkedIn Profile">
+      <i class="fa-brands fa-linkedin"></i>
+      <span>LinkedIn</span>
+    </a>
+    <a href="https://github.com/ankitraj" target="_blank" title="GitHub Profile">
+      <i class="fa-brands fa-github"></i>
+      <span>GitHub</span>
+    </a>
+    <a href="https://twitter.com/ankitraj" target="_blank" title="Twitter Profile">
+      <i class="fa-brands fa-x-twitter"></i>
+      <span>Twitter</span>
+    </a>
+  </div>
+   <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+  <div class="social-links">
+    <a href="ankit2508raj@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://linkedin.com/in/ankitraj" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/Ankit7486" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://twitter.com/ankitraj" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+  </div>
+  <p>© 2025 Ankit Raj. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>
