@@ -1,501 +1,1600 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ankit Raj | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
 
-    body {
-      background-color: #0f172a;
-      color: #f1f5f9;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
+  <meta charset="UTF-8">
 
-    header {
-      background-color: #1e293b;
-      padding: 20px 10%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    header h1 {
-      color: #38bdf8;
-      font-size: 26px;
-    }
+  <meta
+    name="description"
+    content="Ankit Raj — Software Engineer Aspirant, MERN Full-Stack Developer, DSA Problem Solver and Generative AI Explorer."
+  >
 
-    nav a {
-      color: #f1f5f9;
-      margin: 0 15px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+  <meta
+    name="author"
+    content="Ankit Raj"
+  >
 
-    nav a:hover {
-      color: #38bdf8;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 10%;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .hero img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid #38bdf8;
-      margin-bottom: 20px;
-    }
-
-    .hero h2 {
-      font-size: 36px;
-      color: #38bdf8;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 25px;
-      background: #38bdf8;
-      color: #0f172a;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #f1f5f9;
-    }
-
-    section {
-      padding: 60px 10%;
-    }
-
-    section h2 {
-      text-align: center;
-      color: #38bdf8;
-      margin-bottom: 30px;
-      font-size: 28px;
-    }
-
-    .skills-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      margin-top: 20px;
-    }
-
-    .skills-icons i {
-      font-size: 45px;
-      transition: 0.3s;
-    }
-
-    .skills-icons i:hover {
-      transform: scale(1.2);
-      color: #38bdf8;
-    }
-
-    .projects div {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .projects a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-
-    .achievements ul {
-      list-style: none;
-      line-height: 2;
-      text-align: center;
-    }
-
-    .contact .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 20px;
-    }
-
-    .social-links a {
-      color: #38bdf8;
-      font-size: 28px;
-      transition: 0.3s;
-    }
-
-    .social-links a:hover {
-      color: #f1f5f9;
-      transform: scale(1.2);
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-top: 20px;
-    }
-
-    form input, form textarea {
-      padding: 12px;
-      border-radius: 6px;
-      border: none;
-      outline: none;
-      background: #334155;
-      color: #e2e8f0;
-    }
-
-    form button {
-      background: #38bdf8;
-      border: none;
-      padding: 10px;
-      border-radius: 6px;
-      color: #0f172a;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    form button:hover {
-      background: #7dd3fc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1e293b;
-    }
-    /* 🎓 Education Section */
-#education {
-  background: #1e293b;
-  padding: 60px 10%;
-  border-radius: 12px;
-  margin: 40px 0;
-  animation: fadeIn 1s ease-in-out;
-}
-
-#education h2 {
-  text-align: center;
-  color: #38bdf8;
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-.edu-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.edu-card {
-  background: #0f172a;
-  border: 2px solid #38bdf8;
-  border-radius: 12px;
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  transition: 0.3s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-5px);
-  background: #12213b;
-}
-
-.edu-card h3 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-.edu-card p {
-  color: #e2e8f0;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-/* 📱 Responsive Education Section */
-@media (max-width: 768px) {
-  .edu-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .edu-card {
-    width: 90%;
-  }
-}
+  <title>
+    Ankit Raj | Software Engineer • Full Stack • AI
+  </title>
 
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  <!-- Fonts -->
 
-    @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 10px;
-  }
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
 
-  nav a {
-    margin: 8px;
-    font-size: 16px;
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
-  .hero {
-    padding: 60px 5%;
-  }
 
-  .hero img {
-    width: 120px;
-    height: 120px;
-  }
+  <!-- CSS -->
 
-  .hero h2 {
-    font-size: 28px;
-  }
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
 
-  .hero p {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 40px 5%;
-  }
-
-  .skills-icons {
-    gap: 20px;
-  }
-
-  .skills-icons i {
-    font-size: 35px;
-  }
-
-  .projects div {
-    padding: 15px;
-  }
-
-  .achievements ul {
-    font-size: 15px;
-  }
-
-  .social-links a {
-    font-size: 24px;
-  }
-
-  footer p {
-    font-size: 14px;
-  }
-}
-/* 📱 Responsive Social Media Buttons */
-.social-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-  margin-top: 25px;
-}
-
-.social-links a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #38bdf8;
-  font-size: 26px;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.social-links a span {
-  font-size: 14px;
-  color: #f1f5f9;
-  margin-top: 6px;
-}
-
-.social-links a:hover {
-  color: #ffffff;
-  transform: scale(1.2);
-}
-
-/* 📱 Mobile Friendly Social Icons */
-@media (max-width: 768px) {
-  .social-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .social-links a {
-    font-size: 24px;
-  }
-
-  .social-links a span {
-    font-size: 12px;
-  }
-
-  footer .social-links {
-    flex-wrap: nowrap;
-    gap: 18px;
-  }
-}
-
-    
-  </style>
 </head>
+
+
 <body>
 
-  <header>
-    <h1>Ankit Raj</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
+  <!-- Background -->
+
+  <div class="noise"></div>
+
+  <div class="grid-bg"></div>
+
+
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <header class="navbar">
+
+    <div class="nav-inner">
+
+
+      <!-- Logo -->
+
+      <a
+        href="#home"
+        class="logo"
+      >
+
+        <span>&lt;</span>
+
+        ankit
+
+        <b>.</b>
+
+        dev
+
+        <span>/&gt;</span>
+
+      </a>
+
+
+
+      <!-- Navigation -->
+
+      <nav class="nav-links">
+
+        <a
+          href="#home"
+          class="nav-link active"
+        >
+          <span>01</span>
+          Home
+        </a>
+
+
+        <a
+          href="#about"
+          class="nav-link"
+        >
+          <span>02</span>
+          About
+        </a>
+
+
+        <a
+          href="#skills"
+          class="nav-link"
+        >
+          <span>03</span>
+          Skills
+        </a>
+
+
+        <a
+          href="#projects"
+          class="nav-link"
+        >
+          <span>04</span>
+          Projects
+        </a>
+
+
+        <a
+          href="#journey"
+          class="nav-link"
+        >
+          <span>05</span>
+          Journey
+        </a>
+
+      </nav>
+
+
+
+      <!-- Right -->
+
+      <div class="nav-right">
+
+
+        <a
+          href="https://github.com/Ankit7486"
+          target="_blank"
+          rel="noreferrer"
+          class="nav-social"
+        >
+          GitHub ↗
+        </a>
+
+
+        <a
+          href="#contact"
+          class="resume-btn"
+        >
+          Let's Talk
+          <span>↗</span>
+        </a>
+
+
+      </div>
+
+
+
+      <!-- Mobile -->
+
+      <button
+        class="mobile-menu"
+        aria-label="Open menu"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+    </div>
+
   </header>
 
-  <section class="hero">
-    <img src="ankit.jpeg" alt="Ankit Raj Photo">
-    <h2>Hi, I'm Ankit Raj</h2>
-    <p>A passionate B.Tech student & aspiring developer who loves coding, AI, and Linux customization.</p>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p style="text-align:center; max-width:700px; margin:auto;">
-      I'm a 2nd-year B.Tech student at GL Bajaj Institute of Technology and Management.  
-      I enjoy working with Java, web development, and Linux systems.  
-      My goal is to create innovative tech projects and land an internship to sharpen my skills.
-    </p>
-  </section>
-  <section id="education">
-  <h2>Education</h2>
-  <div class="edu-container">
-    <div class="edu-card">
-      <h3>🎓 B.Tech in Computer Science & Engineering</h3>
-      <p><strong>GL Bajaj Institute of Technology and Management</strong></p>
-      <p>2024 – 2028 (Ongoing)</p>
-      <p>Current Year: 2nd Year</p>
-      <p>CGPA: 8.18 (till 2nd semester)</p>
-    </div>
-
-    <div class="edu-card">
-      <h3>🏫Higher school</h3>
-      <p><strong>B.S.E.B Board</strong></p>
-      <p>Year: 2023</p>
-      <p>Percentage: 84%</p>
-    </div>
-  </div>
-</section>
 
 
+  <!-- =====================================================
+       MAIN
+  ====================================================== -->
 
-  <section id="skills">
-    <h2>Skills & Technologies</h2>
-    <div class="skills-icons">
-      <i class="fa-brands fa-html5" title="HTML5"></i>
-      <i class="fa-brands fa-css3-alt" title="CSS3"></i>
-      <i class="fa-brands fa-java" title="Java"></i>
-      <i class="fa-brands fa-linux" title="Linux"></i>
-      <i class="fa-brands fa-github" title="GitHub"></i>
-      <i class="fa-brands fa-js" title="JavaScript"></i>
-      <i class="fa-solid fa-database" title="Database"></i>
-      <i class="fa-solid fa-code" title="C Programming"></i>
-    </div>
-  </section>
+  <main>
 
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div>
-      <h3>💬 Chatbot for Customer Support</h3>
-      <p>A chatbot built using Java to answer customer queries automatically.</p>
-      <a href="https://github.com/ankitraj/chatbot" target="_blank">View on GitHub</a>
-    </div>
-    <div>
-      <h3>🏠 Smart Home Automation</h3>
-      <p>IoT project using Arduino and Blynk app to control devices remotely.</p>
-      <a href="https://github.com/ankitraj/smart-home" target="_blank">View on GitHub</a>
-    </div>
-  </section>
 
-  <section id="achievements" class="achievements">
-    <h2>Achievements</h2>
-    <ul>
-      <li>🏆 Solved 100+ DSA problems on LeetCode</li>
-      <li>💡 Built and customized my own Arch Linux setup</li>
-      <li>🎓 Active learner of AI, IoT, and Cybersecurity</li>
-    </ul>
-  </section>
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p style="text-align:center;">Let's connect! Tap any icon below to reach me instantly 👇</p>
-  <div class="social-links">
-    <a href="mailto:ankit2508raj@gmail.com" target="_blank" title="Send Email">
-      <i class="fa-solid fa-envelope"></i>
-      <span>Email</span>
+    <!-- =================================================
+         HERO
+    ================================================== -->
+
+    <section
+      id="home"
+      class="hero section"
+    >
+
+
+      <div class="hero-copy reveal">
+
+
+        <div class="status">
+
+          <i></i>
+
+          Open to opportunities
+
+        </div>
+
+
+        <p class="eyebrow">
+
+          SOFTWARE ENGINEER ASPIRANT · INDIA
+
+        </p>
+
+
+        <h1>
+
+          Building the web.
+
+          <br>
+
+          <span>
+            Solving the hard.
+          </span>
+
+        </h1>
+
+
+        <p class="hero-text">
+
+          I'm <strong>Ankit Raj</strong> — a Computer Science
+          student who enjoys building useful products with
+          <strong>MERN</strong>, solving challenging problems
+          with <strong>DSA</strong>, and exploring
+          <strong>Generative AI & AI Agents</strong>.
+
+        </p>
+
+
+
+        <div class="hero-actions">
+
+
+          <a
+            href="#projects"
+            class="btn primary"
+          >
+
+            Explore my work
+
+            <span>↗</span>
+
+          </a>
+
+
+           <a
+    href="assets/Ankit-Raj-Resume.pdf"
+    target="_blank"
+    class="btn ghost"
+  >
+    View Resume
+    <span>↗</span>
+  </a>
+
+
+        </div>
+
+
+
+        <div class="quick-stats">
+
+
+          <div>
+
+            <b>400+</b>
+
+            <small>
+              LeetCode
+            </small>
+
+          </div>
+
+
+          <div>
+
+            <b>MERN</b>
+
+            <small>
+              Full Stack
+            </small>
+
+          </div>
+
+
+          <div>
+
+            <b>AI</b>
+
+            <small>
+              Agents · RAG
+            </small>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- Terminal -->
+
+      <div class="hero-visual reveal">
+
+
+        <div class="orb"></div>
+
+
+        <div class="terminal">
+
+
+          <div class="terminal-bar">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <label>
+              ankit@dev ~ %
+            </label>
+
+          </div>
+
+
+
+          <div class="terminal-body">
+
+
+            <p>
+              <em>const</em> developer = {
+            </p>
+
+
+            <p class="indent">
+
+              name:
+
+              <strong>
+                "Ankit Raj"
+              </strong>,
+
+            </p>
+
+
+            <p class="indent">
+
+              stack:
+
+              [
+
+              <strong>"React"</strong>,
+
+              <strong>"Node"</strong>,
+
+              <strong>"MongoDB"</strong>
+
+              ],
+
+            </p>
+
+
+            <p class="indent">
+
+              focus:
+
+              [
+
+              <strong>"DSA"</strong>,
+
+              <strong>"GenAI"</strong>,
+
+              <strong>"Agents"</strong>
+
+              ],
+
+            </p>
+
+
+            <p class="indent">
+
+              mindset:
+
+              <strong>
+                "Build. Learn. Ship."
+              </strong>
+
+            </p>
+
+
+            <p>
+              };
+            </p>
+
+
+            <p class="cursor-line">
+
+              <span>➜</span>
+
+              npm run build-future
+
+              <span class="cursor"></span>
+
+            </p>
+
+
+          </div>
+
+
+        </div>
+
+
+
+        <div class="floating-card fc-one">
+
+          ⚡
+
+          <span>
+            400+ problems
+          </span>
+
+        </div>
+
+
+        <div class="floating-card fc-two">
+
+          ✦
+
+          <span>
+            AI + Full Stack
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         ABOUT
+    ================================================== -->
+
+    <section
+      id="about"
+      class="section about"
+    >
+
+
+      <div class="section-head reveal">
+
+        <span>
+          01 / ABOUT
+        </span>
+
+        <h2>
+          More than a coder.
+        </h2>
+
+      </div>
+
+
+
+      <div class="about-grid">
+
+
+        <div class="about-main reveal">
+
+
+          <p class="big-copy">
+
+            I like understanding
+            <span>why</span>
+            something works —
+            then building it.
+
+          </p>
+
+
+          <p>
+
+            I'm a Computer Science student focused on becoming
+            a strong software engineer. My learning path combines
+            problem solving with product building: DSA in Java,
+            full-stack development with the MERN ecosystem, and
+            hands-on exploration of LLMs, RAG and AI agents.
+
+          </p>
+
+
+          <p>
+
+            I learn by building, debugging and shipping.
+            Every project is an opportunity to understand more
+            about architecture, APIs, databases, UX and the
+            trade-offs behind real software.
+
+          </p>
+
+
+        </div>
+
+
+
+        <div class="principles reveal">
+
+
+          <div>
+
+            <span>01</span>
+
+            <h3>
+              Think deeply
+            </h3>
+
+            <p>
+              Understand the problem before reaching
+              for a solution.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <span>02</span>
+
+            <h3>
+              Build consistently
+            </h3>
+
+            <p>
+              Turn concepts into working features
+              and real projects.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <span>03</span>
+
+            <h3>
+              Keep improving
+            </h3>
+
+            <p>
+              Debug, reflect, refactor — then do it
+              better next time.
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         SKILLS
+    ================================================== -->
+
+    <section
+      id="skills"
+      class="section"
+    >
+
+
+      <div class="section-head reveal">
+
+        <span>
+          03 / TECHNICAL SKILLS
+        </span>
+
+        <h2>
+          My engineering toolkit.
+        </h2>
+
+      </div>
+
+
+
+      <div class="skills-container">
+
+
+        <!-- Languages -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              01
+            </span>
+
+            <h3>
+              Languages
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>C</span>
+            <span>SQL</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Full Stack -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              02
+            </span>
+
+            <h3>
+              Full Stack Development
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>React.js</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>REST APIs</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Database -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              03
+            </span>
+
+            <h3>
+              Database
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>MongoDB</span>
+            <span>SQL</span>
+            <span>Database Design</span>
+            <span>CRUD</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- DSA -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              04
+            </span>
+
+            <h3>
+              DSA & Problem Solving
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>Arrays</span>
+            <span>Strings</span>
+            <span>Linked List</span>
+            <span>Stacks</span>
+            <span>Queues</span>
+            <span>Trees</span>
+            <span>Graphs</span>
+            <span>Dynamic Programming</span>
+            <span>Greedy</span>
+            <span>Binary Search</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- CS -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              05
+            </span>
+
+            <h3>
+              CS Fundamentals
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>OOP</span>
+            <span>DBMS</span>
+            <span>Operating Systems</span>
+            <span>Computer Networks</span>
+            <span>Software Engineering</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Linux -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              06
+            </span>
+
+            <h3>
+              Linux & CLI
+            </h3>
+
+          </div>
+
+
+          <p class="skill-description">
+
+            Linux configuration, terminal workflows,
+            file management, permissions, processes,
+            networking, package management and shell commands.
+
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span>Linux</span>
+            <span>Terminal</span>
+            <span>Shell</span>
+            <span>File System</span>
+            <span>Permissions</span>
+            <span>Processes</span>
+            <span>Networking</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- AI -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              07
+            </span>
+
+            <h3>
+              Generative AI
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>LLMs</span>
+            <span>Prompt Engineering</span>
+            <span>RAG</span>
+            <span>AI Agents</span>
+            <span>Tool Calling</span>
+            <span>AI APIs</span>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Tools -->
+
+        <article class="skill-category reveal">
+
+          <div class="skill-category-head">
+
+            <span class="skill-number">
+              08
+            </span>
+
+            <h3>
+              Tools & Workflow
+            </h3>
+
+          </div>
+
+
+          <div class="skill-tags">
+
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>Postman</span>
+            <span>VS Code</span>
+            <span>API Testing</span>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         DSA
+    ================================================== -->
+
+    <section class="section dsa">
+
+
+      <div class="dsa-panel reveal">
+
+
+        <div>
+
+          <span class="eyebrow">
+            PROBLEM SOLVING
+          </span>
+
+
+          <h2>
+
+            400+ problems.
+
+            <br>
+
+            <span>
+              One problem at a time.
+            </span>
+
+          </h2>
+
+
+          <p>
+
+            Consistent DSA practice has trained me to break
+            complex problems down, reason about constraints,
+            and write efficient solutions.
+
+          </p>
+
+
+          <a
+            href="https://leetcode.com/"
+            target="_blank"
+            rel="noreferrer"
+            class="text-link"
+          >
+            View LeetCode ↗
+          </a>
+
+
+        </div>
+
+
+        <div class="leetcode-number">
+
+          <strong>
+            400<span>+</span>
+          </strong>
+
+          <small>
+            LeetCode solved
+          </small>
+
+
+          <div class="mini-bars">
+
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         PROJECTS
+    ================================================== -->
+
+    <section
+      id="projects"
+      class="section"
+    >
+
+
+      <div class="section-head reveal">
+
+        <span>
+          04 / SELECTED PROJECTS
+        </span>
+
+        <h2>
+          I build, not just learn.
+        </h2>
+
+      </div>
+
+
+
+      <p class="section-intro reveal">
+
+        Real projects are where concepts become engineering.
+        Here's what I've been building across full-stack
+        development and AI.
+
+      </p>
+
+
+
+      <div class="projects-grid">
+
+
+        <!-- =================================================
+             CHATVERSE
+        ================================================== -->
+
+        <article class="project-card featured reveal">
+
+
+          <div class="project-meta">
+
+            <span>
+              01
+            </span>
+
+            <span class="project-status">
+              LIVE · FEATURED
+            </span>
+
+          </div>
+
+
+
+          <div class="project-visual">
+
+            <div class="chat-window">
+
+              <div class="chat-top">
+
+                <span class="online-dot"></span>
+
+                ChatVerse
+
+                <span class="live-label">
+                  LIVE
+                </span>
+
+              </div>
+
+
+              <div class="chat-messages">
+
+                <div class="message received">
+                  Hey! 👋
+                </div>
+
+                <div class="message sent">
+                  Welcome to ChatVerse.
+                </div>
+
+                <div class="message received">
+                  Real-time chat + AI ⚡
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="project-info">
+
+
+            <p class="project-type">
+              REAL-TIME · AI · FULL STACK
+            </p>
+
+
+            <h3>
+              ChatVerse
+            </h3>
+
+
+            <p class="project-description">
+
+              A real-time AI-powered chat application built
+              to explore modern full-stack communication,
+              real-time events and AI-powered conversations.
+
+            </p>
+
+
+            <div class="project-features">
+
+              <span>
+                Real-time Chat
+              </span>
+
+              <span>
+                AI Integration
+              </span>
+
+              <span>
+                Socket.IO
+              </span>
+
+              <span>
+                Responsive UI
+              </span>
+
+            </div>
+
+
+            <div class="project-stack">
+
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>Socket.IO</span>
+              <span>MongoDB</span>
+
+            </div>
+
+
+            <div class="project-links">
+
+
+              <a
+                href="https://chat-verse-eta.vercel.app/"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link"
+              >
+                Live Demo ↗
+              </a>
+
+
+              <a
+                href="https://github.com/Ankit7486/ChatVerse"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link secondary"
+              >
+                GitHub ↗
+              </a>
+
+
+            </div>
+
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             AI INTERVIEW PLATFORM
+        ================================================== -->
+
+        <article class="project-card reveal">
+
+
+          <div class="project-meta">
+
+            <span>
+              02
+            </span>
+
+            <span>
+              AI · FULL STACK
+            </span>
+
+          </div>
+
+
+          <div class="project-info">
+
+
+            <p class="project-type">
+              AI · INTERVIEW PREPARATION
+            </p>
+
+
+            <h3>
+              AI Interview Preparation Platform
+            </h3>
+
+
+            <p class="project-description">
+
+              An AI-powered platform concept for interview
+              practice, resume analysis, mock interviews,
+              intelligent feedback and progress tracking.
+
+            </p>
+
+
+            <div class="project-stack">
+
+              <span>React</span>
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>MongoDB</span>
+              <span>GenAI</span>
+
+            </div>
+
+
+            <div class="project-links">
+
+              <a
+                href="#"
+                class="project-link secondary"
+              >
+                Coming Soon
+              </a>
+
+            </div>
+
+
+          </div>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             AI AGENT LAB
+        ================================================== -->
+
+        <article class="project-card reveal">
+
+
+          <div class="project-meta">
+
+            <span>
+              03
+            </span>
+
+            <span>
+              AI
+            </span>
+
+          </div>
+
+
+          <div class="project-info">
+
+
+            <p class="project-type">
+              GENERATIVE AI
+            </p>
+
+
+            <h3>
+              AI Agent Lab
+            </h3>
+
+
+            <p class="project-description">
+
+              Experiments around LLM applications,
+              structured prompts, retrieval, tool calling
+              and agent workflows.
+
+            </p>
+
+
+            <div class="project-stack">
+
+              <span>LLMs</span>
+              <span>RAG</span>
+              <span>Agents</span>
+              <span>Tool Calling</span>
+
+            </div>
+
+
+            <div class="project-links">
+
+              <a
+                href="https://github.com/Ankit7486"
+                target="_blank"
+                rel="noreferrer"
+                class="project-link secondary"
+              >
+                GitHub ↗
+              </a>
+
+            </div>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         JOURNEY
+    ================================================== -->
+
+    <section
+      id="journey"
+      class="section journey"
+    >
+
+
+      <div class="section-head reveal">
+
+        <span>
+          05 / JOURNEY
+        </span>
+
+        <h2>
+          Still under construction.
+        </h2>
+
+      </div>
+
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item reveal">
+
+          <span>
+            NOW
+          </span>
+
+
+          <div>
+
+            <h3>
+              MERN + GenAI
+            </h3>
+
+            <p>
+
+              Building full-stack applications and exploring
+              how AI can make products more useful.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="timeline-item reveal">
+
+          <span>
+            400+
+          </span>
+
+
+          <div>
+
+            <h3>
+              DSA Foundation
+            </h3>
+
+            <p>
+
+              Consistent problem solving in Java across
+              DP, graphs, trees, greedy, binary search
+              and more.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="timeline-item reveal">
+
+          <span>
+            NEXT
+          </span>
+
+
+          <div>
+
+            <h3>
+              Ship stronger products
+            </h3>
+
+            <p>
+
+              Deepen AI agents, RAG, system design,
+              open source and production engineering.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         PHILOSOPHY
+    ================================================== -->
+
+    <section class="section philosophy">
+
+
+      <div class="quote reveal">
+
+
+        <span class="quote-mark">
+          “
+        </span>
+
+
+        <h2>
+          Consistency beats intensity.
+        </h2>
+
+
+        <p>
+
+          Learn → Build → Break → Debug →
+          Understand → Improve → Ship → Repeat.
+
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         CONTACT
+    ================================================== -->
+
+    <section
+      id="contact"
+      class="section contact"
+    >
+
+
+      <div class="contact-box reveal">
+
+
+        <span class="eyebrow">
+          06 / LET'S CONNECT
+        </span>
+
+
+        <h2>
+          Have an interesting problem?
+        </h2>
+
+
+        <p>
+
+          I'm always interested in learning,
+          collaborating and building something meaningful.
+
+        </p>
+
+
+        <a
+          href="mailto:ankit2508raj@gmail.com"
+          class="mail"
+        >
+
+          ankit2508raj@gmail.com
+
+          <span>
+            ↗
+          </span>
+
+        </a>
+
+
+
+        <div class="socials">
+
+
+          <a
+            href="https://github.com/Ankit7486"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+
+
+          <a
+            href="https://www.linkedin.com/in/ankit-raj2508/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+
+
+          <a
+            href="https://leetcode.com/u/Ankit7486/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LeetCode
+          </a>
+
+
+          <a
+            href="https://www.instagram.com/ankit.jha1911/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Instagram
+          </a>
+
+
+          <a
+            href="https://twitter.com/AnkitRaj2508"
+            target="_blank"
+            rel="noreferrer"
+          >
+            X / Twitter
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer>
+
+
+    <span>
+      © 2026 Ankit Raj
+    </span>
+
+
+    <span>
+      Built with curiosity & caffeine.
+    </span>
+
+
+    <a href="#home">
+      Back to top ↑
     </a>
-    <a href="https://linkedin.com/in/ankit-raj2508" target="_blank" title="LinkedIn Profile">
-      <i class="fa-brands fa-linkedin"></i>
-      <span>LinkedIn</span>
-    </a>
-    <a href="https://github.com/Ankit7486" target="_blank" title="GitHub Profile">
-      <i class="fa-brands fa-github"></i>
-      <span>GitHub</span>
-    </a>
-    <a href="https://x.com/AnkitRaj2508" target="_blank" title="Twitter Profile">
-      <i class="fa-brands fa-x-twitter"></i>
-      <span>Twitter</span>
-    </a>
-  </div>
-   <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-</section>
 
-<footer>
-  <div class="social-links">
-    <a href="mailto:ankit2508raj@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://linkedin.com/in/ankit-raj2508" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="https://github.com/Ankit7486" target="_blank"><i class="fa-brands fa-github"></i></a>
-    <a href="https://x.com/AnkitRaj2508" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-  </div>
-  <p>© 2025 Ankit Raj. All rights reserved.</p>
-</footer>
+
+  </footer>
+
+
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
 
 
 </body>
+
 </html>
